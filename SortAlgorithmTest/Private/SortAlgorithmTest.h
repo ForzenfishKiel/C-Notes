@@ -8,5 +8,5 @@ public:
     static void SelectSort(vector<int>& arr, int size);  //选择排序
     static void InsertSort(vector<int>& arr, int size); //插入排序
     static void ShellSort(vector<int>& arr, int size);  //希尔排序
-    static void MergeSort(vector<int>& arr, int left,int right);
+    static void MergeSort(vector<int>& arr, int left,int right);  //归并排序
 };
