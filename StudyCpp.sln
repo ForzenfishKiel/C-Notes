@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudyCpp", "StudyCpp.vcxproj", "{78DE5EF1-6B65-4C09-A980-344FD6B0E1B9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm", "Algorithm", "{27D91C9D-BD5B-46DF-862C-33CC6BA12CF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SortAlgorithm", "SortAlgorithm", "{4398B40D-AF98-4422-B799-5D1F44710FAF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortAlgorithmTest", "SortAlgorithmTest\SortAlgorithmTest.vcxproj", "{CBB4835F-4524-4B4A-9BED-FAE46AF28358}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -18,5 +24,16 @@ Global
 		{78DE5EF1-6B65-4C09-A980-344FD6B0E1B9}.Release|Win32.Build.0 = Release|Win32
 		{78DE5EF1-6B65-4C09-A980-344FD6B0E1B9}.Release|x64.ActiveCfg = Release|x64
 		{78DE5EF1-6B65-4C09-A980-344FD6B0E1B9}.Release|x64.Build.0 = Release|x64
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Debug|Win32.Build.0 = Debug|Win32
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Debug|x64.ActiveCfg = Debug|x64
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Debug|x64.Build.0 = Debug|x64
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Release|Win32.ActiveCfg = Release|Win32
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Release|Win32.Build.0 = Release|Win32
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Release|x64.ActiveCfg = Release|x64
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBB4835F-4524-4B4A-9BED-FAE46AF28358} = {4398B40D-AF98-4422-B799-5D1F44710FAF}
 	EndGlobalSection
 EndGlobal
