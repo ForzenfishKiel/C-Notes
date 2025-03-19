@@ -1,0 +1,16 @@
+﻿  StudyCpp.cpp
+D:\UE_Project\StudyCpp\StudyCpp.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\UE_Project\StudyCpp\StudyCpp.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“StudyCpp.cpp”)
+  
+D:\UE_Project\StudyCpp\WeakPtrTest.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“StudyCpp.cpp”)
+  
+D:\UE_Project\StudyCpp\StudyCpp.cpp(220,26): error C2065: “vec04”: 未声明的标识符
+D:\UE_Project\StudyCpp\StudyCpp.cpp(220,5): error C2059: 语法错误:“for”
+D:\UE_Project\StudyCpp\StudyCpp.cpp(220,31): error C2059: 语法错误:“)”
+D:\UE_Project\StudyCpp\StudyCpp.cpp(220,26): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\UE_Project\StudyCpp\StudyCpp.cpp(222,15): error C2065: “it”: 未声明的标识符
+D:\UE_Project\StudyCpp\StudyCpp.cpp(222,17): error C2059: 语法错误:“;”
+D:\UE_Project\StudyCpp\StudyCpp.cpp(223,5): error C2059: 语法错误:“}”
+D:\UE_Project\StudyCpp\StudyCpp.cpp(223,5): error C2143: 语法错误: 缺少“;”(在“}”的前面)

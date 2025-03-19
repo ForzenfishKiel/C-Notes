@@ -265,6 +265,8 @@ void SortClass::ShellSort(vector<int>& arr, int size)
 合并过程通过双指针遍历两个子数组，按序选取较小元素填入临时空间，最终回写原数组。
  */
 
+//时间复杂度 O(nlogn)
+
 // 合并两个有序数组 [left..mid] 和 [mid+1..right]
 void Arraymerge(vector<int>& arr, int left, int mid, int right) {
     // 计算左右子数组的长度
@@ -282,7 +284,7 @@ void Arraymerge(vector<int>& arr, int left, int mid, int right) {
     // 双指针合并
     int i = 0, j = 0, k = left;  // i指向L，j指向R，k指向原数组
     while (i < leftLen && j < rightLen) {
-        if (L[i] <= R[j]) arr[k++] = L[i++];  // 取较小的元素
+        if (L[i] <= R[j]) arr[k++] = L[i++];  // 取较小的元素，然后替换
         else arr[k++] = R[j++];
     }
 
@@ -312,6 +314,52 @@ void mergeSort(vector<int>& arr, int n) {
     SortClass::MergeSort(arr, 0, n - 1);  //导入数组的索引位置，一个指向开头，一个指向结尾
 }
 
+
+// 双指针分区函数：返回基准的最终位置
+//左边找大，右边找小
+int partition(vector<int>& arr, int left, int right) {
+    int pivot = arr[1 + (right - left) / 2]; // 选中间元素为基准（避免最坏情况）
+    int i = left;    // 左指针（找大的）
+    int j = right;   // 右指针（找小的）
+
+    while (true) {
+        while (arr[i] < pivot) {++i;} // 左指针右移，直到找到 >=pivot 的元素
+        while (arr[j] > pivot) {--j;} // 右指针左移，直到找到 <=pivot 的元素
+
+        if (i >= j) return j; // 指针相遇时，分区完成
+
+        //指针没相遇但是左边找到了大右边找到了小则会交换
+        swap(arr[i], arr[j]); // 交换逆序对
+    }
+}
+//快速排序
+/*快速排序是一种非常常用的排序方法，它在1962由C. A. R. Hoare（霍尔）提的一种二叉树结构的交换排序方法，
+ *故因此它又被称为霍尔划分，它基于分治的思想，所以整体思路是递归进行的。
+* 双指针法像两把梳子从两端向中间梳理：
+
+左梳子专抓大元素
+
+右梳子专抓小元素
+
+抓到后互相交换，直到梳子相遇
+ */
+// 递归排序函数
+void quickSort(vector<int>& arr, int left, int right) {
+    if (left < right) {
+        int p = partition(arr, left, right); // 获取分区点
+        quickSort(arr, left, p);    // 处理左半部分，以分区点为右闭区间
+        quickSort(arr, p + 1, right); // 处理右半部分，以分区点+1为左闭区间
+    }
+}
+
+
+void SortClass::QuickSort(vector<int>& arr, int left, int right)
+{
+    //递归入口
+    quickSort(arr, left, right);
+}
+
+
 int main(int argc, char* argv[])
 {
     vector<int> BubbleSortArray = {8,1,3,4,7,6,9,10};
@@ -325,6 +373,11 @@ int main(int argc, char* argv[])
 
     vector<int> MergeSortArray = {2,3,1,6,10,14,11,8,4};
     mergeSort(MergeSortArray,MergeSortArray.size());
+
+    vector<int> QuickSortArray = {2,1,0,8};
+    SortClass::QuickSort(QuickSortArray,0,QuickSortArray.size() - 1);
     
     return 0;
 }
+
+

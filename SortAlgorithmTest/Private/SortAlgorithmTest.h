@@ -9,4 +9,5 @@ public:
     static void InsertSort(vector<int>& arr, int size); //插入排序
     static void ShellSort(vector<int>& arr, int size);  //希尔排序
     static void MergeSort(vector<int>& arr, int left,int right);  //归并排序
+    static void QuickSort(vector<int>& arr, int left, int right);
 };

@@ -148,7 +148,7 @@ public:
     }
 
 };
-/*浅拷贝（Shallow Copy）
+/* 浅拷贝（Shallow Copy）
 *ShallowClass obj2 = obj1; 本质上是：
 *
 ShallowClass obj2(obj1);
@@ -157,7 +157,7 @@ ShallowClass obj2(obj1);
 
 /*直接复制 other.data（指针地址）到新对象的 data。
 
-导致 obj1.data 和 obj2.data 指向同一块内存。*/
+导致 obj1.data 和 obj2.data 指向同一块内存。 */
 
 
 /*
@@ -178,10 +178,11 @@ ShallowClass obj2(obj1);
 
 适用场景：
 
-对象没有动态分配的资源（如仅含基本类型成员）。*/
+对象没有动态分配的资源（如仅含基本类型成员）。 */
 class ShallowClass {
 public:
     int* data;
     ShallowClass(int val) { data = new int(val); }
     // 使用编译器生成的浅拷贝构造函数和赋值运算符
+    
 };
